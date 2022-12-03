@@ -1,0 +1,11 @@
+//Reset
+@import "scss-reset/reset.scss";
+
+//Tailwind
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
