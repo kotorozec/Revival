@@ -9,3 +9,29 @@
 html {
   scroll-behavior: smooth;
 }
+
+@layer base {
+  body {
+    @apply bg-white
+  }
+}
+
+@layer base {
+  body {
+    @apply dark:bg-gray-800
+  }
+}
+
+@layer base {
+  body {
+    @apply dark:text-white
+  }
+
+}
+
+.app-cursor {
+  z-index: 1000;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}

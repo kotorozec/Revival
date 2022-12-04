@@ -1,6 +1,12 @@
-const Kontakt = () => {
+
+
+export const Kontakt = () => {
     return (
-        <div></div>
+        <div>
+            <h1>
+                kontakt
+            </h1>
+        </div>
     )
 }
 

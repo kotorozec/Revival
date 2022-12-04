@@ -4,12 +4,13 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Revival</title>
+        <title>Revival - sprzątanie zostaw nam!</title>
         <meta name="description" content="Usuwamy skutki obecności osób zmarłych w mieszkaniach i samochodach." />
       </Head>
-<main>
-
-</main>
+        <div>
+            ttt
+        </div>
     </div>
+
   )
 }
