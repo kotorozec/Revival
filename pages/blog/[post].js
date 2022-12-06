@@ -84,23 +84,23 @@ export default function Post({post}) {
             </main>
             <footer>
                 <FacebookShareButton
-                    url={`/blog/${slug}`}>
+                    url={`https://revival-nine.vercel.app/${slug}`}>
                     <FacebookIcon size={32} round/>
                 </FacebookShareButton>
                 <PinterestShareButton
-                    url={`/blog/${slug}`}>
+                    url={`https://revival-nine.vercel.app/${slug}`}>
                     <PinterestIcon size={32} round/>
                 </PinterestShareButton>
                 <RedditShareButton
-                    url={`/blog/${slug}`}>
+                    url={`https://revival-nine.vercel.app/${slug}`}>
                     <RedditIcon size={32} round/>
                 </RedditShareButton>
                 <WhatsappShareButton
-                    url={`/blog/${slug}`}>
+                    url={`https://revival-nine.vercel.app/${slug}`}>
                     <WhatsappIcon size={32} round/>
                 </WhatsappShareButton>
                 <LinkedinShareButton
-                    url={`/blog/${slug}`}>
+                    url={`https://revival-nine.vercel.app/${slug}`}>
                     <LinkedinIcon size={32} round/>
                 </LinkedinShareButton
                 >
