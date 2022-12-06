@@ -44,6 +44,15 @@ export async function getStaticProps({params}) {
         content_type: "revivalBlog",
         'fields.slug': params.post
     })
+
+    if (!items.length) {
+        return {
+            redirect:{
+                destination:"/blog/404",
+                permanent:false
+            }
+        }
+    }
     return {
         props: {post: items[0]},
         revalidate: 5
