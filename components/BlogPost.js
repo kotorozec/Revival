@@ -3,7 +3,6 @@ import Link from "next/link";
 
 const BlogPost = ({post}) => {
     const {postTitle, slug, postThumbNail, metaDescription} = post.fields
-    console.log(post)
     return (
         <div className={"max-w-3xl p-6 group"}>
             <article

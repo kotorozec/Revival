@@ -14,6 +14,7 @@ import {
     LinkedinShareButton,
     LinkedinIcon,
 } from 'next-share';
+import Loading from "../../components/Loading";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
@@ -34,7 +35,7 @@ export const getStaticPaths = async () => {
 
     return {
         paths: paths,
-        fallback: false,
+        fallback: true,
     }
 }
 
@@ -45,11 +46,12 @@ export async function getStaticProps({params}) {
     })
     return {
         props: {post: items[0]},
-        revalidate:5
+        revalidate: 5
     }
 }
 
 export default function Post({post}) {
+    if (!post) return <Loading/>
     const {metaDescription, postTitle, postThumbNail, postContent, slug} = post.fields
     return (
         <>
