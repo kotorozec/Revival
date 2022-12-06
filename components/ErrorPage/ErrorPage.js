@@ -7,8 +7,8 @@ import WomanEyes from "./WomanEyes";
 
 const ErrorPage = () => {
     return (
-        <div>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+        <div className={"w-full flex justify-center items-center"}>
+            <svg className={"mt-8 max-w-2xl"} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
                 <g>
                     <ellipse
                         cx="250.56"
@@ -444,7 +444,6 @@ const ErrorPage = () => {
                     </g>
                 </g>
             </svg>
-
         </div>
     );
 }
