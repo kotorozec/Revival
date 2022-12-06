@@ -10,7 +10,7 @@ const Layout = ({children}) => {
             <CustomCursor/>
             <Navbar/>
             <div>
-                <main className={"h-screen"}>
+                <main className={"min-h-screen"}>
                     {children}
                 </main>
             </div>
