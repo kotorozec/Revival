@@ -1,7 +1,7 @@
 import {createClient} from "contentful";
 import Head from "next/head";
 import Image from "next/image";
-import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import {
     FacebookShareButton,
     FacebookIcon,
@@ -44,12 +44,13 @@ export async function getStaticProps({params}) {
         'fields.slug': params.post
     })
     return {
-        props: {post: items[0]}
+        props: {post: items[0]},
+        revalidate:5
     }
 }
 
 export default function Post({post}) {
-    const {metaDescription, postTitle, postThumbNail, postContent,slug} = post.fields
+    const {metaDescription, postTitle, postThumbNail, postContent, slug} = post.fields
     return (
         <>
             <Head>
@@ -70,29 +71,29 @@ export default function Post({post}) {
                     </div>
                 </article>
             </main>
-<footer>
-    <FacebookShareButton
-        url={`/blog/${slug}`} >
-        <FacebookIcon size={32} round />
-    </FacebookShareButton>
-    <PinterestShareButton
-        url={`/blog/${slug}`} >
-        <PinterestIcon size={32} round />
-    </PinterestShareButton>
-    <RedditShareButton
-        url={`/blog/${slug}`} >
-        <RedditIcon size={32} round />
-    </RedditShareButton>
-    <WhatsappShareButton
-        url={`/blog/${slug}`} >
-        <WhatsappIcon size={32} round />
-    </WhatsappShareButton>
-    <LinkedinShareButton
-        url={`/blog/${slug}`} >
-        <LinkedinIcon size={32} round />
-    </LinkedinShareButton
->
-</footer>
+            <footer>
+                <FacebookShareButton
+                    url={`/blog/${slug}`}>
+                    <FacebookIcon size={32} round/>
+                </FacebookShareButton>
+                <PinterestShareButton
+                    url={`/blog/${slug}`}>
+                    <PinterestIcon size={32} round/>
+                </PinterestShareButton>
+                <RedditShareButton
+                    url={`/blog/${slug}`}>
+                    <RedditIcon size={32} round/>
+                </RedditShareButton>
+                <WhatsappShareButton
+                    url={`/blog/${slug}`}>
+                    <WhatsappIcon size={32} round/>
+                </WhatsappShareButton>
+                <LinkedinShareButton
+                    url={`/blog/${slug}`}>
+                    <LinkedinIcon size={32} round/>
+                </LinkedinShareButton
+                >
+            </footer>
         </>
     )
 }
