@@ -8,7 +8,7 @@ const PageNotFound = () => {
     useEffect(() => {
         setTimeout(() => {
             router.push('/blog')
-        }, 113000)
+        }, 4000)
     }, [])
     return (
         <div className={"h-1/3"}>
