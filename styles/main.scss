@@ -12,26 +12,47 @@ html {
 
 @layer base {
   body {
-    @apply bg-white
+    @apply bg-gray-100
   }
 }
 
 @layer base {
   body {
-    @apply dark:bg-gray-800
+    @apply dark:bg-gray-800 dark:text-white
   }
 }
 
 @layer base {
-  body {
-    @apply dark:text-white
-  }
-
+ h1 {
+   @apply mt-6 text-center text-3xl font-extrabold text-gray-800
+ }
 }
 
-.app-cursor {
-  z-index: 1000;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+@layer base {
+  [type="email"],
+  [type="number"],
+  [type="text"],
+  [multiple],
+  textarea,
+  select, {
+    @apply w-full text-sm font-medium text-gray-700 rounded-lg border-gray-300 shadow-sm focus:border-[#ffa500] focus:ring-[#ffa500] mt-1
+  }
+}
+
+@layer base {
+  [type="checkbox"] {
+    @apply focus:ring-[#ffa500] text-[#ffa500] rounded-md
+  }
+}
+
+@layer base {
+  label {
+    @apply text-sm font-medium text-gray-700
+  }
+}
+
+@layer components {
+  .linkFocus {
+    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffa500]
+  }
 }

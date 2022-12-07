@@ -23,7 +23,7 @@ const Blog = ({blog}) => {
             <title>Revival - blog</title>
             <meta name="description" content="Na naszym blogu zamieszczamy ciekawe artykuły dotyczące branży, w której działamy. Opisujemy m.in. procesy związane z dezynsekcją i sprzątaniem miejsca zgonu." />
         </Head>
-            <h1>Blog</h1>
+            <h1 className={"dark:text-white"}>Blog</h1>
         <div className={"md:grid md:grid-cols-2 md:gap-2 lg: grid lg:grid-cols-3 lg:gap-2"}>
             {blog.map(post => (
                 <BlogPost key={post.sys.id} post={post}/>
