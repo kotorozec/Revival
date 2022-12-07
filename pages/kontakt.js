@@ -1,6 +1,19 @@
 import Head from 'next/head'
 
 export const Kontakt = () => {
+    async function handleOnSubmit(e) {
+        e.preventDefault();
+        const formData = {};
+        Array.from(e.currentTarget.elements).forEach(field => {
+            if (!field.name) return;
+            formData[field.name] = field.value;
+        });
+        await fetch('../api/sendmail', {
+            method: 'POST',
+            body: JSON.stringify(formData)
+        });
+    }
+
     return (
         <>
             <Head>
@@ -21,7 +34,7 @@ export const Kontakt = () => {
 
                     <div className="mt-8 sm:mx-auto w-full max-w-xl">
                         <div className="bg-white py-4 px-6 shadow rounded-lg sm:px-10">
-                            <form className="mb-0 space-y-6" method="post">
+                            <form className="mb-0 space-y-6" method="post" onSubmit={handleOnSubmit}>
                                 <div>
                                     <label htmlFor="name">Imię</label>
                                     <input id="name" name="name" type="text" required/>
@@ -38,13 +51,14 @@ export const Kontakt = () => {
                                 </div>
 
                                 <div className="flex items-center">
-                                    <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox"/>
+                                    <input id="terms-and-privacy" name="terms-and-privacy" type="checkbox" required/>
                                     <label htmlFor="terms-and-privacy" className="ml-2 block text-xs">
                                         Administratorem Pani/Pana danych osobowych jest Revival sp. z o.o. z siedzibą
                                         w&nbsp;Warszawie.
-                                        Pani/Pana dane osobowe będą przetwarzane w celu odpowiedzi na zadane pytanie
+                                        Pani/Pana dane osobowe będą przetwarzane w&nbsp;celu odpowiedzi na zadane
+                                        pytanie
                                         oraz archiwizacji formularza. Więcej informacji na temat przetwarzania Pani/Pana
-                                        danych osobowych znajduje się w Polityce prywatności.
+                                        danych osobowych znajduje się w&nbsp;Polityce prywatności.
                                     </label>
                                 </div>
 
