@@ -51,8 +51,3 @@ html {
   }
 }
 
-@layer components {
-  .linkFocus {
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffa500]
-  }
-}

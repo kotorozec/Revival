@@ -54,7 +54,7 @@ const Navbar = () => {
             <div className={"sticky w-full h-20 shadow-xl z-10 rounded-xl"}>
 
                 <div className={"flex justify-between items-center w-full h-full px-2 2xl:px-16"}>
-                    <Link href={"/"} className="linkFocus">
+                    <Link href={"/"}>
                         <Image
                             src={menuPng}
                             alt={"Revival Logo"}
@@ -65,39 +65,39 @@ const Navbar = () => {
                     </Link>
                     <div>
                         <ul className={"hidden md:flex px-4"}>
-                            <Link href={"/"} className={"ml-10 linkFocus"}>
+                            <Link href={"/"} className={"ml-10"}>
                                 <li className={"text-sm uppercase hover:scale-110 hover transition text-gray-500 font-semibold dark:text-white"}>Strona
                                     Główna
                                 </li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href="/uslugi" className={"ml-10 linkFocus"}>
+                            <Link href="/uslugi" className={"ml-10"}>
                                 <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Usługi</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href={"/cennik"} className={"ml-10 linkFocus"}>
+                            <Link href={"/cennik"} className={"ml-10"}>
                                 <li className={" text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Cennik</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/cennik" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href={"/galeria"} className={"ml-10 linkFocus"}>
+                            <Link href={"/galeria"} className={"ml-10"}>
                                 <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Galeria</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/galeria" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href={"/referencje"} className={"ml-10 linkFocus"}>
+                            <Link href={"/referencje"} className={"ml-10"}>
                                 <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Opinie</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/referencje" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href={"/kontakt"} className={"ml-10 linkFocus"}>
+                            <Link href={"/kontakt"} className={"ml-10"}>
                                 <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Kontakt</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/kontakt" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href={"/blog"} className={"ml-10 linkFocus"}>
+                            <Link href={"/blog"} className={"ml-10"}>
                                 <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Blog</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/blog" ? '100%' : '0%'}}/>
@@ -135,38 +135,38 @@ const Navbar = () => {
                         </div>
                         <div className={"py-6"}>
                             <ul className={"flex flex-col w-full items-center justify-around h-[400px]"}>
-                                <Link href={"/"} className={"linkFocus"}>
+                                <Link href={"/"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Strona Główna
                                     </li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                                 </Link>
-                                <Link href={"/uslugi"} className={"linkFocus"}>
+                                <Link href={"/uslugi"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Usługi</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
                                 </Link>
-                                <Link href={"/cennik"} className={"linkFocus"}>
+                                <Link href={"/cennik"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Cennik</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/cennik" ? '100%' : '0%'}}/>
                                 </Link>
-                                <Link href={"/galeria"} className={"linkFocus"}>
+                                <Link href={"/galeria"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Galeria</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/galeria" ? '100%' : '0%'}}/>
                                 </Link>
-                                <Link href={"/referencje"} className={"linkFocus"}>
+                                <Link href={"/referencje"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Opinie</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/referencje" ? '100%' : '0%'}}/>
                                 </Link>
-                                <Link href={"/kontakt"} className={"linkFocus"}>
+                                <Link href={"/kontakt"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Kontakt</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/kontakt" ? '100%' : '0%'}}/>
                                 </Link>
-                                <Link href={"/blog"} className={"linkFocus"}>
+                                <Link href={"/blog"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Blog</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/blog" ? '100%' : '0%'}}/>
