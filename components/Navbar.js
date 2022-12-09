@@ -9,9 +9,19 @@ import styled from 'styled-components';
 import {MdMenu, MdClose} from "react-icons/md";
 import {FaLinkedinIn, FaTwitter, FaInstagram} from "react-icons/fa";
 import menuPng from '../assets/logo-revival.png'
-
+import pl from "../locales/pl";
+import en from "../locales/en";
 
 const Navbar = () => {
+    const routerTranslation = useRouter();
+    const { locale } = routerTranslation ;
+    const t = locale === 'pl' ? pl : en;
+
+    const changeLanguage = (e) => {
+        const locale = e.target.value;
+        routerTranslation.push(routerTranslation.pathname, routerTranslation.asPath, { locale });
+    };
+
     const [nav, setNav] = useState(false);
     const handleNav = () => {
         setNav(!nav)
@@ -64,36 +74,36 @@ const Navbar = () => {
                         />
                     </Link>
                     <div>
-                        <ul className={"hidden md:flex px-4"}>
+                        <ul className={"hidden md:flex px-4 justify-center items-center"}>
                             <Link href={"/"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 hover transition text-gray-500 font-semibold dark:text-white"}>Strona
-                                    Główna
+                                <li className={"text-sm uppercase hover:scale-110 hover transition text-gray-500 font-semibold dark:text-white"}>
+                                    {t.MenuHome}
                                 </li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href="/uslugi" className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Usługi</li>
+                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuServices}</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/cennik"} className={"ml-10"}>
-                                <li className={" text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Cennik</li>
+                                <li className={" text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuPricing}</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/cennik" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/galeria"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Galeria</li>
+                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuGallery}</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/galeria" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/referencje"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Opinie</li>
+                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuReviews}</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/referencje" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/kontakt"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Kontakt</li>
+                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuContact}</li>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/kontakt" ? '100%' : '0%'}}/>
                             </Link>
@@ -103,11 +113,19 @@ const Navbar = () => {
                                       animate={{width: router.asPath === "/blog" ? '100%' : '0%'}}/>
                             </Link>
                             <li className={"ml-5"}>{renderTheme()}</li>
-
+                            <select
+                                onChange={changeLanguage}
+                                defaultValue={locale}
+                                className="ml-5 text-center bg-transparent max-w-[72px] text-[12px] text-gray-500 font-bold rounded-full border-2 border-gray-400 dark:text-white"
+                            >
+                                <option value="pl">PL</option>
+                                <option value="en">EN</option>
+                            </select>
                         </ul>
                         <motion.div onClick={handleNav} className={"md:hidden"} whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.75}}>
                             <MdMenu size={25} color={"#ffa500"} className={"dark:fill-white"}/>
+
                         </motion.div>
                     </div>
                 </div>
@@ -125,6 +143,14 @@ const Navbar = () => {
                                     height={50}
                                     className={"hover:scale-110 transition mt-2 rounded-full"}
                                 />
+                                <select
+                                    onChange={changeLanguage}
+                                    defaultValue={locale}
+                                    className="text-center bg-transparent max-w-[80px] text-[12px] text-gray-500 font-bold rounded-full border-2 border-gray-400 dark:text-white"
+                                >
+                                    <option value="pl">PL</option>
+                                    <option value="en">EN</option>
+                                </select>
 
                                 <motion.div onClick={handleNav}
                                             className={"rounded-full shadow-md shadow-gray-600 p-1 cursor-pointer dark:bg-white dark:shadow-none"}
@@ -136,33 +162,33 @@ const Navbar = () => {
                         <div className={"py-6"}>
                             <ul className={"flex flex-col w-full items-center justify-around h-[400px]"}>
                                 <Link href={"/"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Strona Główna
+                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuHome}
                                     </li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/uslugi"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Usługi</li>
+                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuServices}</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/cennik"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Cennik</li>
+                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuPricing}</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/cennik" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/galeria"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Galeria</li>
+                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuGallery}</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/galeria" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/referencje"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Opinie</li>
+                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuReviews}</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/referencje" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/kontakt"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Kontakt</li>
+                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuContact}</li>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/kontakt" ? '100%' : '0%'}}/>
                                 </Link>
@@ -174,8 +200,7 @@ const Navbar = () => {
                                 {renderTheme()}
                             </ul>
                             <div className={"pt-10"}>
-                                <p className={"uppercase text-md text-gray-500 font-semibold text-center dark:text-white"}>Pozostańmy w
-                                    kontakcie!</p>
+                                <p className={"uppercase text-md text-gray-500 font-semibold text-center dark:text-white"}>{t.MenuMobileCallToAction}</p>
                                 <div className={"flex item-center justify-center my-4 w-full sm:w-[85% gap-x-4"}>
                                     <div
                                         className={" flex item-center justify-center rounded-full shadow-lg shadow-gray-600 py-2 cursor-pointer hover:scale-110 ease-in duration-300 w-1/5 dark:shadow-none dark:bg-white"}>

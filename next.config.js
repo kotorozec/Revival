@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+
+
+module.exports = {
+    i18n: {
+        locales: ['pl', 'en'],
+        defaultLocale: 'pl',
+    },
     reactStrictMode: true,
     images: {
         domains: ['images.ctfassets.net'],
     },
 }
 
-module.exports = nextConfig
+
