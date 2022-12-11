@@ -55,17 +55,17 @@ export async function getStaticProps({params}) {
     }
     return {
         props: {post: items[0]},
-        revalidate: 5
+        revalidate: 1
     }
 }
 
 export default function Post({post}) {
     if (!post) return <Loading/>
-    const {metaDescription, postTitle, postThumbNail, postContent, slug} = post.fields
+    const {metaDescription, postTitle, postThumbNail, postContent, slug, metaTitle} = post.fields
     return (
         <>
             <Head>
-                <title>{postTitle}</title>
+                <title>{metaTitle}</title>
                 <meta name="description" content={metaDescription}/>
             </Head>
             <main className="w-full p-6 flex justify-center ">
