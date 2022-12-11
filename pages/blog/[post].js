@@ -3,16 +3,12 @@ import Head from "next/head";
 import Image from "next/image";
 import {documentToReactComponents} from '@contentful/rich-text-react-renderer';
 import {
-    FacebookShareButton,
     FacebookIcon,
-    PinterestShareButton,
-    PinterestIcon,
-    RedditShareButton,
-    RedditIcon,
-    WhatsappShareButton,
-    WhatsappIcon,
-    LinkedinShareButton,
+    FacebookShareButton,
     LinkedinIcon,
+    LinkedinShareButton,
+    RedditIcon,
+    RedditShareButton
 } from 'next-share';
 import Loading from "../../components/Loading";
 
@@ -47,9 +43,9 @@ export async function getStaticProps({params}) {
 
     if (!items.length) {
         return {
-            redirect:{
-                destination:"/blog/404",
-                permanent:false
+            redirect: {
+                destination: "/blog/404",
+                permanent: false
             }
         }
     }
@@ -61,7 +57,27 @@ export async function getStaticProps({params}) {
 
 export default function Post({post}) {
     if (!post) return <Loading/>
-    const {metaDescription, postTitle, postThumbNail, postContent, slug, metaTitle} = post.fields
+    const {metaDescription, postTitle, postImage, postContent, slug, metaTitle, dateofpublication} = post.fields
+
+    const handleTimeToReadPost = () => {
+        const timeValue = ((postContent.content
+            .map(el => el.content)
+            .map(x => x.map(el => el.value))
+            .flat()
+            .toString()
+            .split(" ")
+            .filter(word => word !== '').length) / 220).toFixed() * 1
+
+        if (timeValue === 1) {
+            return `Ten tekst przeczytasz w ${timeValue} minutę.`
+        } else if (timeValue >= 2 < 5) {
+            return `Ten tekst przeczytasz w ${timeValue} minuty.`
+        } else {
+            return `Ten tekst przeczytasz w ${timeValue} minut.`
+        }
+    }
+
+
     return (
         <>
             <Head>
@@ -69,34 +85,50 @@ export default function Post({post}) {
                 <meta name="description" content={metaDescription}/>
             </Head>
             <main className="w-full p-6 flex justify-center ">
-                <article className={"bg-gray-800 flex-col max-w-5xl"}>
-                    <Image
-                        src={`http:${postThumbNail.fields.file.url}`}
-                        width={100}
-                        height={100}
-                        className={"self-center ring-2 rounded-full ring-[#ffa500] "}
-                        alt={postTitle}
-                    />
-                    <div>
+                <article className={"bg-white flex-col max-w-4xl rounded-2xl px-10 shadow-2xl py-4"}>
+                    <div className={"w-100 md:flex md:justify-end md:items-center"}>
+                        <div className={"md:w-1/2 pb-4"}>
+                            <h1 className={"text-left text-3xl font-semibold text-[#ffa500]"}>{postTitle}</h1>
+                            <p className={"text-gray-600 pt-2"}> Data publikacji: {dateofpublication}</p>
+                            <p className={"font-semibold text-gray-700"}>
+                                {handleTimeToReadPost()}
+                            </p>
+                        </div>
+                        <Image
+                            src={`http:${postImage.fields.file.url}`}
+                            width={200}
+                            height={200}
+                            className={"hidden md:block w-1/2 aspect-video rounded-t-xl object-cover"}
+                            alt={postTitle}
+                        />
+                    </div>
+                    <div className={"text-gray-700"}>
                         {documentToReactComponents(postContent)}
+                    </div>
+                    <div className={"block md:flex justify-end items-center gap-3 py-4"}>
+                        <h5 className={"font-semibold dark:text-gray-800"}>Podoba Ci się nasz artykuł? Podziel się nim
+                            ze znajomymi:</h5>
+                        <div className={"mt-2"}>
+                            <FacebookShareButton
+                                url={`https://revival-mu.vercel.app/blog/${slug}`}>
+                                <FacebookIcon size={32} round className={"mr-2"}/>
+                            </FacebookShareButton>
+                            <RedditShareButton
+                                url={`https://revival-mu.vercel.app/blog/${slug}`}>
+                                <RedditIcon size={32} round className={"mr-2"}/>
+                            </RedditShareButton>
+                            <LinkedinShareButton
+                                url={`https://revival-mu.vercel.app/blog/${slug}`}>
+                                <LinkedinIcon size={32} round className={"mr-2"}/>
+                            </LinkedinShareButton
+                            >
+                        </div>
+
                     </div>
                 </article>
             </main>
-            <footer>
-                <FacebookShareButton
-                    url={`https://revival-two.vercel.app/blog/${slug}`}>
-                    <FacebookIcon size={32} round/>
-                </FacebookShareButton>
-                <RedditShareButton
-                    url={`https://revival-nine.vercel.app/blog/${slug}`}>
-                    <RedditIcon size={32} round/>
-                </RedditShareButton>
-                <LinkedinShareButton
-                    url={`https://revival-nine.vercel.app/blog/${slug}`}>
-                    <LinkedinIcon size={32} round/>
-                </LinkedinShareButton
-                >
-            </footer>
+
+
         </>
     )
 }

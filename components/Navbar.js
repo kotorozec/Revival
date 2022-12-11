@@ -129,7 +129,7 @@ const Navbar = () => {
                         </motion.div>
                     </div>
                 </div>
-                <div onClick={handleNav} className={nav ? " md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
+                <div  className={nav ? " md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
                     <div
                         className={nav
                             ? "fixed transform translate-x-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#e3e3e3] ease-in duration-500 p-4 dark:bg-gray-800"
@@ -159,7 +159,7 @@ const Navbar = () => {
                                 </motion.div>
                             </div>
                         </div>
-                        <div className={"py-6"}>
+                        <div className={"py-6"} onClick={handleNav}>
                             <ul className={"flex flex-col w-full items-center justify-around h-[400px]"}>
                                 <Link href={"/"}>
                                     <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuHome}
