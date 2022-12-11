@@ -61,7 +61,7 @@ const Navbar = () => {
     const router = useRouter()
     return (
         <div>
-            <div className={"sticky w-full h-20 shadow-xl z-10 rounded-xl"}>
+            <div className={"sticky top-10 w-full h-20 shadow-xl z-10 rounded-xl"}>
 
                 <div className={"flex justify-between items-center w-full h-full px-2 2xl:px-16"}>
                     <Link href={"/"}>
@@ -129,7 +129,7 @@ const Navbar = () => {
                         </motion.div>
                     </div>
                 </div>
-                <div className={nav ? " md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
+                <div onClick={handleNav} className={nav ? " md:hidden fixed left-0 top-0 w-full h-screen bg-black/70" : ""}>
                     <div
                         className={nav
                             ? "fixed transform translate-x-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#e3e3e3] ease-in duration-500 p-4 dark:bg-gray-800"

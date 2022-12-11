@@ -24,9 +24,19 @@ html {
 
 @layer base {
  h1 {
-   @apply mt-6 text-center text-3xl font-extrabold text-gray-800
+   @apply mt-6 text-center text-4xl font-extrabold text-gray-800
  }
-}
+  h2 {
+    @apply text-3xl font-semibold text-gray-700
+  }
+  h3 {
+    @apply text-2xl
+  }
+  h4 {
+    @apply text-xl my-2
+  }
+ }
+
 
 @layer base {
   [type="email"],
@@ -50,4 +60,3 @@ html {
     @apply text-sm font-medium text-gray-700
   }
 }
-
