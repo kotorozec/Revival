@@ -19,4 +19,5 @@ export default {
     ContactFormFieldRequired:"Pole jest wymagane",
     ContactFormGDPRCheckbox:'Administratorem Pani/Pana danych osobowych jest Revival sp. z o.o. z siedzibą w Warszawie. Pani/Pana dane osobowe będą przetwarzane w celu odpowiedzi na zadane pytanie oraz archiwizacji formularza. Więcej informacji na temat przetwarzania Pani/Pana danych osobowych znajduje się w Polityce prywatności.',
     ContactFormSendButton:'Wyślij',
+    BlogLoadMore:"Więcej",
 }

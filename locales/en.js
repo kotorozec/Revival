@@ -19,4 +19,5 @@ export default {
     ContactFormFieldRequired:"This field is required",
     ContactFormGDPRCheckbox:'The administrator of your personal data is Revival sp. z o.o. based in Warsaw. Your personal data will be processed in order to answer your question and archive the form. More information about the processing of your personal data can be found in the Privacy Policy.',
     ContactFormSendButton:'Send',
+    BlogLoadMore:"Load more",
 };
