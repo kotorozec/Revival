@@ -2,7 +2,7 @@ import prices from "../locales/prices";
 import ModalElement from "./Modal";
 
 const Prices = () => {
-    return <div className="articles">
+    return <div className={"flex xs:flex-com sm:flex-row justify-center items-center gap-x-3"}>
         {prices.map(el => (
             <ModalElement prices={el} key={el.id}/>
         ))}

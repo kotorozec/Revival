@@ -37,35 +37,41 @@ export const backDrop = {
 
 export const modalShown = {
     show: {
+        position: "absolute",
         top: "50%",
         left: "50%",
-        translateX: "-50%",
-        translateY: "-50%",
         opacity: 1,
         transition: {
             delay: 0.5
         }
 
     },
-    hidden: {
-        opacity: 0,
-    },
     exit: {
         top: "-100%",
-        opacity: 0,
     }
 }
 
 export const ModalCircle = {
     show: {
         clipPath: "circle(100%)",
-        zIndex:"-1",
+        zIndex: "-1",
         transition: {
-            duration: 2
+            duration: 1.5,
         }
     },
     hidden: {
-        opacity:0,
+        opacity: 0,
+    },
+}
 
+export const ModalText = {
+    show: {
+        opacity: 1,
+        transition: {
+            delay: 1.5
+        }
+    },
+    hidden: {
+        opacity: 0,
     },
 }

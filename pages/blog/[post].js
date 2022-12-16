@@ -84,7 +84,7 @@ export default function Post({post}) {
                 <title>{metaTitle}</title>
                 <meta name="description" content={metaDescription}/>
             </Head>
-            <main className="w-full p-6 flex justify-center ">
+            <main className={"container max-w-screen-2xl mx-auto px-5 py-6 flex justify-center"}>
                 <article className={"bg-white flex-col max-w-4xl rounded-2xl px-10 shadow-2xl py-4"}>
                     <div className={"w-100 md:flex md:justify-end md:items-center"}>
                         <div className={"md:w-1/2 pb-4"}>

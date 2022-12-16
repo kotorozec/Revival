@@ -37,8 +37,9 @@ const Blog = ({blog}) => {
                 <meta name="description"
                       content="Na naszym blogu zamieszczamy ciekawe artykuły dotyczące branży, w której działamy. Opisujemy m.in. procesy związane z dezynsekcją i sprzątaniem miejsca zgonu."/>
             </Head>
+            <main className={"container max-w-screen-2xl mx-auto px-5"}>
             <h1 className={"dark:text-white"}>Blog</h1>
-            <div className={"md:grid md:grid-cols-2 md:gap-2 lg: grid lg:grid-cols-3 lg:gap-2 max-w-8xl"}>
+            <div className={"md:grid md:grid-cols-2 md:gap-2 lg: grid lg:grid-cols-3 lg:gap-2"}>
                 {blog.slice(0, postNum).map(post => (
                     <BlogPost key={post.sys.id} post={post}>
                     </BlogPost>
@@ -48,7 +49,7 @@ const Blog = ({blog}) => {
                 <button onClick={handleLoadMore}
                         className={"bg-[#ffa500] px-4 py-2 rounded-lg text-white shadow-xl hover:scale-90 duration-300"}>{t.BlogLoadMore}</button>
             </div>
-
+            </main>
         </>
     )
 }

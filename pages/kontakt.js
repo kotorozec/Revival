@@ -61,9 +61,9 @@ export const Kontakt = () => {
                       content={t.ContactMetaDescription}/>
             </Head>
 
-            <main>
-                <div className="flex flex-col justify-center py-8 px-6 lg:px-8">
-                    <div className="sm:mx-auto sm:w-full sm:max-w-lg">
+            <main className={"container max-w-screen-2xl mx-auto px-5"}>
+                <div className="flex flex-col justify-center py-4">
+                    <div className="sm:mx-auto sm:w-full sm:max-w-xl">
                         <h1 className={"dark:text-white"}>{t.ContactTitlePart1}<span
                             className={"text-[#ffa500]"}>{t.ContactTitlePart2}</span></h1>
                         <p className="mt-2 text-center text-sm text-gray-600 font-semibold">{t.ContactCallToAction}

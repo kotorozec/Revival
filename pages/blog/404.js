@@ -14,11 +14,13 @@ const PageNotFound = () => {
         <>
             <Head>
                 <title>Revival - Posta nie znaleziono</title>
-                <meta name="description" content="Ups! Wygląda na to, że artykuł o podanym adresie nie istnieje" />
+                <meta name="description" content="Ups! Wygląda na to, że artykuł o podanym adresie nie istnieje"/>
             </Head>
-            <div className={"h-1/3"}>
-                <ErrorPage/>
-            </div>
+            <main className={"container max-w-screen-2xl mx-auto px-5"}>
+                <div className={"h-1/3"}>
+                    <ErrorPage/>
+                </div>
+            </main>
         </>
     )
 }
