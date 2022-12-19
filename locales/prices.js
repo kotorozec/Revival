@@ -93,6 +93,25 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+    },
+    {
+        id: 5,
+        service:"Service: ",
+        servicePl:"Usługa: ",
+        description:"Description: ",
+        descriptionPl:"Opis: ",
+        pricing:"Pricing: ",
+        pricingPl:"Cena: ",
+        content: "Complete post-mortem cleanup.",
+        contentPl: "Dezodoryzacja.",
+        contentDescription: "Disinfection, disinfestation, disposal of contaminated equipment and deodorization.",
+        contentDescriptionPl: "Likwidacja uciążliwych zapachów",
+        contentPriceTxt: "starting at 900 zł.",
+        contentPriceTxtPl: "od 300 zł.",
+        callToAction: "Contact us",
+        callToActionPL: "Kontakt",
+        btnClose: "Close",
+        btnClosePL: "Zamknij",
     }
 ];
 

@@ -9,8 +9,8 @@ export default {
     FooterText:"2022 r. Wszelkie prawa zastrzeżone",
     PricePageTitle:'Cennik Revival – wycena specjalistycznych usług sprzątających',
     PriceMetaDescription:'Przygotowaliśmy podstawowy cennik, na podstawie którego dokonujemy indywidualnej wyceny usług sprzątających – zapraszamy do zapoznania się ze szczegółami.',
-    PriceTitlePart1: 'Cennik',
-    PriceTitlePart2: ' - jasne i przejrzyste warunki współpracy',
+    PriceTitlePart1: 'Cennik - jasne i przejrzyste',
+    PriceTitlePart2: ' warunki współpracy',
     PriceIntroText:'Zapraszamy do zapoznania się z naszym cennikiem. Stawiamy na jasne i przejrzyste warunki współpracy, dlatego zamieściliśmy w nim podstawowe ceny. Wszystkie usługi podlegają indywidualnej wycenie, która jest zależna od poziomu skomplikowania zlecenia i rozmiaru pomieszczenia, w którym będą wykonywane prace.',
 
     ContactPageTitle:'Revival - czekamy na Twoją wiadomość',

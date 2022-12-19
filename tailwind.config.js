@@ -5,13 +5,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   darkMode:"class",
-  theme: {
-    extend: {
-      fontFamily:{
-        burtons:"burtons",
-      },
-    },
-  },
   plugins: [
     require('@tailwindcss/forms'),
   ],
