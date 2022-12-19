@@ -18,10 +18,10 @@ const ModalElement = ({prices}) => {
 
     return (
 
-            <div key={prices.id} className={"min-w-[180px] min-h-[180px] h-full rounded-lg bg-white flex-col justify-center items-center relative px-4 shadow-lg dark:bg-white"}>
+            <div key={prices.id} className={"min-w-[100px] min-h-[200px] h-full rounded-lg bg-white flex-col justify-center items-center relative px-4 shadow-lg dark:bg-white"}>
                 <div className={"absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[80%] text-white font-semibold min-h-[50px] flex item-center justify-center shadow-lg rounded-lg bg-[#ffa500]"}>
-                    <p className={"self-center"}>{locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content}</p></div>
-                <button aria-label={"Zobacz nasz cennik!"} onClick={handleModal} className={"w-full h-full text-lg text-gray-800 dark:text-white self-center dark:text-gray-800"}>
+                    <p className={"self-center text-center "}>{locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content}</p></div>
+                <button aria-label={"Zobacz nasz cennik!"} onClick={handleModal} className={"w-full h-full text-gray-500 self-center font-semibold"}>
                     {locale === 'pl' && prices.contentDescriptionPl || locale !== 'pl' && prices.contentDescription}
                 </button>
 
