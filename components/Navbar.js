@@ -74,45 +74,45 @@ const Navbar = () => {
                         />
                     </Link>
                     <div>
-                        <ul className={"hidden md:flex px-4 justify-center items-center"}>
+                        <div className={"hidden md:flex px-4 justify-center items-center"}>
                             <Link href={"/"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 hover transition text-gray-500 font-semibold dark:text-white"}>
+                                <div className={"text-sm uppercase hover:scale-110 hover transition text-gray-500 font-semibold dark:text-white"}>
                                     {t.MenuHome}
-                                </li>
+                                </div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href="/uslugi" className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuServices}</li>
+                                <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuServices}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/cennik"} className={"ml-10"}>
-                                <li className={" text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuPricing}</li>
+                                <div className={" text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuPricing}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/cennik" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/galeria"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuGallery}</li>
+                                <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuGallery}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/galeria" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/referencje"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuReviews}</li>
+                                <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuReviews}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/referencje" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/kontakt"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuContact}</li>
+                                <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuContact}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/kontakt" ? '100%' : '0%'}}/>
                             </Link>
                             <Link href={"/blog"} className={"ml-10"}>
-                                <li className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Blog</li>
+                                <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>Blog</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/blog" ? '100%' : '0%'}}/>
                             </Link>
-                            <li className={"ml-5"}>{renderTheme()}</li>
+                            <div className={"ml-5"}>{renderTheme()}</div>
                             <select
                                 onChange={changeLanguage}
                                 defaultValue={locale}
@@ -121,7 +121,7 @@ const Navbar = () => {
                                 <option value="pl">PL</option>
                                 <option value="en">EN</option>
                             </select>
-                        </ul>
+                        </div>
                         <motion.div onClick={handleNav} className={"md:hidden"} whileHover={{scale: 1.1}}
                                     whileTap={{scale: 0.75}}>
                             <MdMenu size={25} color={"#ffa500"} className={"dark:fill-white"}/>
@@ -160,45 +160,45 @@ const Navbar = () => {
                             </div>
                         </div>
                         <div className={"py-6"} onClick={handleNav}>
-                            <ul className={"flex flex-col w-full items-center justify-around h-[400px]"}>
+                            <div className={"flex flex-col w-full items-center justify-around h-[400px]"}>
                                 <Link href={"/"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuHome}
-                                    </li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuHome}
+                                    </div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/uslugi"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuServices}</li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuServices}</div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/cennik"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuPricing}</li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuPricing}</div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/cennik" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/galeria"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuGallery}</li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuGallery}</div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/galeria" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/referencje"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuReviews}</li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuReviews}</div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/referencje" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/kontakt"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuContact}</li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>{t.MenuContact}</div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/kontakt" ? '100%' : '0%'}}/>
                                 </Link>
                                 <Link href={"/blog"}>
-                                    <li className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Blog</li>
+                                    <div className={"text-md text-gray-500 font-semibold uppercase py-1 dark:text-white"}>Blog</div>
                                     <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                           animate={{width: router.asPath === "/blog" ? '100%' : '0%'}}/>
                                 </Link>
                                 {renderTheme()}
-                            </ul>
+                            </div>
                             <div className={"pt-10"}>
                                 <p className={"uppercase text-md text-gray-500 font-semibold text-center dark:text-white"}>{t.MenuMobileCallToAction}</p>
                                 <div className={"flex item-center justify-center my-4 w-full sm:w-[85% gap-x-4"}>

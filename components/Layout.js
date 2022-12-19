@@ -8,7 +8,7 @@ const Layout = ({children}) => {
             <Navbar/>
 
             <div>
-                <main className={"min-h-fit"}>
+                <main className={"min-h-[80vh]"}>
                     {children}
                     <BackToTopButton/>
                 </main>

@@ -46,7 +46,7 @@ const Blog = ({blog}) => {
                 ))}
             </div>
             <div className={"max-w-8xl flex justify-center py-4"}>
-                <button onClick={handleLoadMore}
+                <button onClick={handleLoadMore} aria-label={"Zobacz więcej"}
                         className={"bg-[#ffa500] px-4 py-2 rounded-lg text-white shadow-xl hover:scale-90 duration-300"}>{t.BlogLoadMore}</button>
             </div>
             </main>

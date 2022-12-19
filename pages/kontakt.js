@@ -121,7 +121,7 @@ export const Kontakt = () => {
                                 </label>
                             </div>
                             <div className={"flex w-full justify-center mt-4"}>
-                                <Button
+                                <Button aria-label={"Wyślij wiadomość"}
                                     className={"w-1/2 flex justify-center items-center py-2 px-4 border border-transparent rounded-xl shadow-sm text-sm font-bold text-white bg-[#3871c1] hover:bg-[#ffa500] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#ffa500] duration-400"}
                                     disabled={!values.name || !values.email || !values.message}
                                     isLoading={isLoading}
