@@ -12,7 +12,11 @@ export default {
     PriceTitlePart1: 'Cennik - jasne i przejrzyste',
     PriceTitlePart2: ' warunki współpracy',
     PriceIntroText:'Zapraszamy do zapoznania się z naszym cennikiem. Stawiamy na jasne i przejrzyste warunki współpracy, dlatego zamieściliśmy w nim podstawowe ceny. Wszystkie usługi podlegają indywidualnej wycenie, która jest zależna od poziomu skomplikowania zlecenia i rozmiaru pomieszczenia, w którym będą wykonywane prace.',
-
+    GalleryPageTitle:'Galeria zdjęć Revival  – poznaj nasze realizacje i sprzęt',
+    GalleryMetaDescription:'W galerii zamieściliśmy zdjęcia przedstawiające sprzęt, który wykorzystujemy podczas wykonywania zleceń klientów. Zachęcamy do zapoznania się z realizacjami.',
+    GalleryTitlePart1: 'Galeria - poznaj nasze',
+    GalleryTitlePart2: ' realizacje i sprzęt',
+    GalleryIntroText:'Zachęcamy do zapoznania się z przykładowymi realizacjami. Na zamieszczenie zdjęć, wyrażona została zgoda osób zlecających daną usługę.',
     ContactPageTitle:'Revival - czekamy na Twoją wiadomość',
     ContactMetaDescription:"Czekamy z niecierpliwością na Twoją wiadomość - daj nam znać jak możemy Ci pomóc?",
     ContactTitlePart1: 'Czekamy na ',

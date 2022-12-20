@@ -12,6 +12,12 @@ export default {
     PriceTitlePart1: 'Pricing - clear and transparent',
     PriceTitlePart2: ' terms of cooperation',
     PriceIntroText:'We invite you to familiarize yourself with our price list. We focus on clear and transparent terms of cooperation, so we have included basic prices. All services are subject to individual pricing, which depends on the level of complexity of the order and the size of the room in which the work will be performed.',
+    GalleryPageTitle:'Revival photo gallery - learn about our projects and equipment',
+    GalleryMetaDescription:'In the gallery, we have posted photos showing the equipment we use when carrying out customer orders. We encourage you to familiarize yourself with the realizations.',
+    GalleryTitlePart1: 'Gallery - learn about our',
+    GalleryTitlePart2: ' realizations and equipment',
+    GalleryIntroText:'We encourage you to familiarize yourself with sample implementations. For the inclusion of photos, the consent of the persons ordering the service was given.',
+
     ContactPageTitle:'Revival - waiting to hear from you',
     ContactMetaDescription:"We look forward to hearing from you - let us know how we can help you?",
     ContactTitlePart1: 'We are looking forward to ',

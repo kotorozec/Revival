@@ -95,7 +95,7 @@ const prices = [
         btnClosePL: "Zamknij",
     },
     {
-        id: 5,
+        id: 6,
         service:"Service: ",
         servicePl:"Usługa: ",
         description:"Description: ",
