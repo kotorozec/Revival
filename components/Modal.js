@@ -25,12 +25,14 @@ const ModalElement = ({prices}) => {
                 <p className={"self-center text-center "}>{locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content}</p>
             </div>
 
-            <div className={"flex w-full my-10 justify-center px-2 cursor-pointer gap-x-3"} onClick={handleModal}>
+            <div className={"flex w-full my-4 justify-center items-center px-2 cursor-pointer gap-x-3 h-full"} onClick={handleModal}>
 
-                <div aria-label={"Zobacz nasz cennik!"} className={"w-full h-full text-gray-500 self-center font-semibold text-sm"}>
+                <div aria-label={"Zobacz nasz cennik!"} className={"w-full flex-grow text-gray-500 font-semibold"}>
                     {locale === 'pl' && prices.contentDescriptionPl || locale !== 'pl' && prices.contentDescription}
                 </div>
-                <Image src={prices.imgThumbnail} alt={locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content} width={'100%'} height={200} className={"max-w-full aspect-square max-w-[200px]"}/>
+                <div className={"w-full"}>
+                    <Image src={prices.imgThumbnail} alt={locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content} width={'100%'} height={200} className={"aspect-square"}/>
+                </div>
             </div>
 
 
