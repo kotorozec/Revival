@@ -8,7 +8,7 @@ module.exports = {
     },
     reactStrictMode: true,
     images: {
-        domains: ['images.ctfassets.net', "ipukbrxtxppaawehzhkp.supabase.co"],
+        domains: ['images.ctfassets.net', "ipukbrxtxppaawehzhkp.supabase.co", "revival-nu.vercel.app"],
     },
 }
 

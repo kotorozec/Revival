@@ -18,12 +18,20 @@ const ModalElement = ({prices}) => {
 
     return (
 
-            <div key={prices.id} className={"min-w-[100px] min-h-[200px] h-full rounded-lg bg-white flex-col justify-center items-center relative px-4 shadow-lg dark:bg-white"}>
-                <div className={"absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[80%] text-white font-semibold min-h-[50px] flex item-center justify-center shadow-lg rounded-lg bg-[#ffa500]"}>
-                    <p className={"self-center text-center "}>{locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content}</p></div>
-                <button aria-label={"Zobacz nasz cennik!"} onClick={handleModal} className={"w-full h-full text-gray-500 self-center font-semibold"}>
+        <div key={prices.id}
+             className={"h-full rounded-lg bg-white flex-col justify-center items-center relative px-4 shadow-lg dark:bg-white"}>
+            <div
+                className={"absolute top-0 left-1/2 translate-x-[-50%] translate-y-[-50%] w-[80%] text-white font-semibold min-h-[50px] flex item-center justify-center shadow-lg rounded-lg bg-gray-600"}>
+                <p className={"self-center text-center "}>{locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content}</p>
+            </div>
+
+            <div className={"flex w-full my-10 flex-grow justify-center px-2 cursor-pointer"} onClick={handleModal}>
+
+                <div aria-label={"Zobacz nasz cennik!"} className={"w-full h-full text-gray-500 self-center font-semibold"}>
                     {locale === 'pl' && prices.contentDescriptionPl || locale !== 'pl' && prices.contentDescription}
-                </button>
+                </div>
+                <Image src={prices.imgThumbnail} alt={locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content} width={200} height={200} className={"aspect-square"}/>
+            </div>
 
 
             <AnimatePresence exitBeforeEnter={true}>
@@ -48,8 +56,8 @@ const ModalElement = ({prices}) => {
                                             {locale === 'pl' && prices.contentPriceTxtPl || locale !== 'pl' && prices.contentPriceTxt}
                                         </h3>
                                     </motion.div>
-                                    <div className={"h-full"}>
-                                        <Image width={1167} height={924} src={PopUpImg} alt={"Mężczyzna w galaktyce"}
+                                    <div className={"h-full px-4"}>
+                                        <Image width={300} height={300} src={prices.imgThumbnail} alt={""}
                                                className={"self-center max-w-xs sm:max-w-sm md::max-w-md"}/>
                                     </div>
                                 </div>

@@ -1,3 +1,9 @@
+import messege from '../assets/message.svg'
+import touch from '../assets/stay_in_touch.svg'
+import town from '../assets/town.svg'
+import show from '../assets/show.svg'
+import dragable from '../assets/dragable.svg'
+import dawn from '../assets/dawn.svg'
 const prices = [
     {
         id: 1,
@@ -17,6 +23,7 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+        imgThumbnail:touch,
     },
     {
         id: 2,
@@ -36,6 +43,7 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+        imgThumbnail:town
     },
     {
         id: 3,
@@ -55,6 +63,7 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+        imgThumbnail:messege
     },
     {
         id: 4,
@@ -74,6 +83,7 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+        imgThumbnail:show
     },
     {
         id: 5,
@@ -93,6 +103,7 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+        imgThumbnail:dragable,
     },
     {
         id: 6,
@@ -112,6 +123,7 @@ const prices = [
         callToActionPL: "Kontakt",
         btnClose: "Close",
         btnClosePL: "Zamknij",
+        imgThumbnail:dawn,
     }
 ];
 
