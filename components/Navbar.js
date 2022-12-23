@@ -36,7 +36,7 @@ const Navbar = () => {
         const currentTheme = theme === "system" ? defaultTheme : theme;
         if (currentTheme === "dark") {
             return (
-                <ToggleButton className={"flex items-center justify-center bg-[#3871c1] hover:bg-white"}
+                <ToggleButton className={"flex items-center justify-center bg-[#3871c1] hover:bg-white mx-2"}
                               onClick={() => setTheme("light")}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 hover:fill-[#ffa500] duration-300">
                         <path
@@ -46,7 +46,7 @@ const Navbar = () => {
             )
         } else {
             return (
-                <ToggleButton className={"flex items-center justify-center bg-[#3871c1] hover:bg-gray-900"}
+                <ToggleButton className={"flex items-center justify-center bg-[#3871c1] hover:bg-gray-900 mx-2"}
                               onClick={() => setTheme("dark")}>
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                          className="w-6 h-6 fill-white hover:fill-[#ffa500] duration-300">
@@ -60,8 +60,8 @@ const Navbar = () => {
     }
     const router = useRouter()
     return (
-        <div>
-            <div className={"sticky top-10 w-full h-20 shadow-xl z-10 rounded-xl"}>
+        <div className={"container max-w-screen-2xl mx-auto p-5"}>
+            <div className={"sticky w-full h-20 shadow-xl z-10 rounded-xl"}>
 
                 <div className={"flex justify-between items-center w-full h-full px-2 2xl:px-16"}>
                     <Link href={"/"}>
@@ -133,7 +133,7 @@ const Navbar = () => {
                     <div
                         className={nav
                             ? "fixed transform translate-x-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#e3e3e3] ease-in duration-500 p-4 dark:bg-gray-800"
-                            : "fixed translate-x-[-100%] top-0 ease-in duration-500  p-4"}>
+                            : "fixed translate-x-[-150%] lg:hidden top-0 ease-in duration-500  p-4"}>
                         <div>
                             <div className={"flex w-full items-center justify-between"}>
                                 <Image

@@ -17,7 +17,11 @@ export default {
     GalleryTitlePart1: 'Gallery - learn about our',
     GalleryTitlePart2: ' realizations and equipment',
     GalleryIntroText:'We encourage you to familiarize yourself with sample implementations. For the inclusion of photos, the consent of the persons ordering the service was given.',
-
+    TestimonialsPageTitle:'Revival recommendations - many customers have already trusted us',
+    TestimonialsMetaDescription:'We have completed many orders, which have resulted in recommendations from customers who are satisfied with our services. It is worth getting acquainted with them and take up cooperation with us.',
+    TestimonialsTitlePart1: 'Recommendations - many customers',
+    TestimonialsTitlePart2: ' have already trusted us',
+    TestimonialsIntroText:'We can boast of many completed orders and recommendations obtained from customers who trusted our company. It\'s worth taking a look at them to find out what kind of places we have worked in.',
     ContactPageTitle:'Revival - waiting to hear from you',
     ContactMetaDescription:"We look forward to hearing from you - let us know how we can help you?",
     ContactTitlePart1: 'We are looking forward to ',

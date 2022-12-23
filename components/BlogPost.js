@@ -4,7 +4,7 @@ import Link from "next/link";
 const BlogPost = ({post}) => {
     const {postTitle, slug, postThumbNail, metaDescription} = post.fields
     return (
-        <div className={"max-w-3xl p-6 group"}>
+        <div className={"container max-w-screen-2xl mx-auto p-5"}>
             <article
                     className={"flex-col justify-center p-6 bg-gray-800 text-white rounded-lg dark:text-gray-800 dark:bg-white group-hover:scale-105 duration-300 group-hover:shadow-lg group-hover:shadow-gray-600 "}>
                 <div className={"w-full flex justify-center items-center"}>

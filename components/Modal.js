@@ -5,7 +5,6 @@ import Image from "next/image";
 import {backDrop, ModalCircle, modalShown, ModalText} from "/components/Animations";
 import {motion, AnimatePresence} from "framer-motion";
 import styled from 'styled-components'
-import PopUpImg from '../assets/revival-popup-ornament-pricelist.svg'
 
 const ModalElement = ({prices}) => {
     const [showModal, setShowModal] = useState(false);
@@ -27,8 +26,8 @@ const ModalElement = ({prices}) => {
 
             <div className={"flex w-full my-4 justify-center items-center px-2 cursor-pointer gap-x-3 h-full"} onClick={handleModal}>
 
-                <div aria-label={"Zobacz nasz cennik!"} className={"w-full flex-grow text-gray-500 font-semibold"}>
-                    {locale === 'pl' && prices.contentDescriptionPl || locale !== 'pl' && prices.contentDescription}
+                <div className={"w-full flex-grow text-gray-500 font-semibold"}>
+                   <p className={"py-4"}>{locale === 'pl' && prices.contentDescriptionPl || locale !== 'pl' && prices.contentDescription}</p>
                 </div>
                 <div className={"w-full"}>
                     <Image src={prices.imgThumbnail} alt={locale === 'pl' && prices.contentPl || locale !== 'pl' && prices.content} width={'100%'} height={200} className={"aspect-square"}/>
