@@ -3,9 +3,6 @@ import Image from 'next/image'
 import {useRouter} from "next/router";
 import pl from "../locales/pl";
 import en from "../locales/en";
-import TestimonialSVG from "../components/TestimonialsSVG/TestimonialSVG";
-import Slider from "../components/Slider/Slider";
-
 
 const Referencje = () => {
     const routerTranslation = useRouter();
@@ -28,12 +25,8 @@ const Referencje = () => {
                     </p>
                 </div>
 
-                <div className={"grid sm:grid-cols-1 md:grid-cols-2 p-12 gap-x-6"}>
-                    <div
-                        className={"rounded-lg bg-white p-12 flex justify-center items-center object-cover max-h-[400px]"}>
-                        <TestimonialSVG/>
-                    </div>
-                    <Slider/>
+                <div className={"flex flex-col-reverse md:flex-row w-full justify-evenly items-center"}>
+
                 </div>
             </main>
         </>

@@ -1,6 +1,6 @@
 const TestimonialSVG = () => {
     return (
-        <svg className={"max-w-[400px]"}
+        <svg className={"aspect-square max-w-[400px]"}
             xmlns="http://www.w3.org/2000/svg"
             width="752.016"
             height="682"

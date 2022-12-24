@@ -11,8 +11,7 @@ const testimonials = [
         id: 2,
         name: "Dominik Kantorowiczm",
         testimonials: "lorem ipsum",
-        testimonialsPl: `dddddddddddddddddddddddddddd
-        ddddddddddddddddddddddddddddddddddddddddddddddddddddd`,
+        testimonialsPl: `ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd`,
         avatar: "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
     },
     {
