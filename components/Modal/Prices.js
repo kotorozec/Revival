@@ -1,4 +1,4 @@
-import prices from "../locales/prices";
+import prices from "../../locales/prices";
 import ModalElement from "./Modal";
 
 const Prices = () => {

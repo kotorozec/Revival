@@ -2,7 +2,7 @@ import {useState} from "react";
 import {useRouter} from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import {backDrop, ModalCircle, modalShown, ModalText} from "/components/Animations";
+import {backDrop, ModalCircle, modalShown, ModalText} from "/components/Animations/Animations";
 import {motion, AnimatePresence} from "framer-motion";
 import styled from 'styled-components'
 

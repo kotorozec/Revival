@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import {createClient} from "contentful";
-import BlogPost from "../../components/BlogPost";
+import BlogPost from "../../components/Blog/BlogPost";
 import {useState} from "react";
 
 import {useRouter} from 'next/router';

@@ -1,7 +1,7 @@
 import '../styles/main.scss'
-import Layout from "../components/Layout";
+import Layout from "../components/Layout/Layout";
 import {ThemeProvider} from "next-themes";
-import {pageAnimations} from "../components/Animations";
+import {pageAnimations} from "../components/Animations/Animations";
 import {motion, AnimatePresence} from "framer-motion";
 import styled from "styled-components";
 import {useRouter} from 'next/router'

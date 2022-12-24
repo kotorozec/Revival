@@ -1,6 +1,6 @@
 import Navbar from "./Navbar";
 import Footer from "./Footer";
-import BackToTopButton from "./BackToTopButton";
+import BackToTopButton from "../Buttons/BackToTopButton";
 
 const Layout = ({children}) => {
     return (

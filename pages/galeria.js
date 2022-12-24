@@ -2,7 +2,7 @@ import Head from "next/head";
 import {useRouter} from "next/router";
 import pl from "../locales/pl";
 import en from "../locales/en";
-import GalleryBlurImg from "../components/GalleryBlurImg";
+import GalleryBlurImg from "../components/Gallery/GalleryBlurImg";
 import {createClient} from "@supabase/supabase-js";
 import {useState} from "react";
 

@@ -1,4 +1,4 @@
-import Prices from "/components/Prices";
+import Prices from "/components/Modal/Prices";
 import Head from 'next/head'
 import {useRouter} from "next/router";
 import pl from "../locales/pl";

@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
-import pl from "../locales/pl";
-import en from "../locales/en";
+import pl from "../../locales/pl";
+import en from "../../locales/en";
 
 
 const Footer = () => {

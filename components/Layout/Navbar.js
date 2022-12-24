@@ -3,14 +3,14 @@ import Link from "next/link";
 import {useRouter} from 'next/router'
 import {useTheme} from "next-themes";
 import {useState, useEffect} from "react";
-import ToggleButton from "./ToggleButton";
+import ToggleButton from "../Buttons/ToggleButton";
 import {motion} from "framer-motion"
 import styled from 'styled-components';
 import {MdMenu, MdClose} from "react-icons/md";
 import {FaLinkedinIn, FaTwitter, FaInstagram} from "react-icons/fa";
-import menuPng from '../assets/logo-revival.png'
-import pl from "../locales/pl";
-import en from "../locales/en";
+import menuPng from '../../assets/logo-revival.png'
+import pl from "../../locales/pl";
+import en from "../../locales/en";
 
 const Navbar = () => {
     const routerTranslation = useRouter();
@@ -82,7 +82,7 @@ const Navbar = () => {
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href="/uslugi" className={"ml-10"}>
+                            <Link href="/pages/uslugi" className={"ml-10"}>
                                 <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuServices}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>

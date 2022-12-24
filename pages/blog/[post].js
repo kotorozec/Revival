@@ -10,7 +10,7 @@ import {
     RedditIcon,
     RedditShareButton
 } from 'next-share';
-import Loading from "../../components/Loading";
+import Loading from "../../components/Blog/Loading";
 
 const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,

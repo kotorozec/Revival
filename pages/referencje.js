@@ -3,7 +3,8 @@ import Image from 'next/image'
 import {useRouter} from "next/router";
 import pl from "../locales/pl";
 import en from "../locales/en";
-import testimonials from "../assets/testimonials.svg"
+import TestimonialSVG from "../components/TestimonialsSVG/TestimonialSVG";
+import Slider from "../components/Slider/Slider";
 
 
 const Referencje = () => {
@@ -27,18 +28,12 @@ const Referencje = () => {
                     </p>
                 </div>
 
-                <div className={"flex w-full justify-center items-center p-12 gap-x-6"}>
-                    <div className={"h-full relative w-full rounded-lg bg-white p-12 flex justify-center items-center"}>
-                        <Image src={testimonials} width={400} height={400} alt={""}/>
-
+                <div className={"grid sm:grid-cols-1 md:grid-cols-2 p-12 gap-x-6"}>
+                    <div
+                        className={"rounded-lg bg-white p-12 flex justify-center items-center object-cover max-h-[400px]"}>
+                        <TestimonialSVG/>
                     </div>
-
-
-                    <div className={"h-full w-full "}>
-
-
-                    </div>
-
+                    <Slider/>
                 </div>
             </main>
         </>
