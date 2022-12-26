@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {useRouter} from "next/router";
 import pl from "../locales/pl";
 import en from "../locales/en";
+import testimonials from "../locales/testimonials";
 
 const Referencje = () => {
     const routerTranslation = useRouter();
@@ -25,7 +26,23 @@ const Referencje = () => {
                     </p>
                 </div>
 
-                <div className={"flex flex-col-reverse md:flex-row w-full justify-evenly items-center"}>
+                <div className={"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3"}>
+                    {testimonials.map(el => {
+                        return (
+                            <div className={"bg-gray-500"}>
+                                <div className={"flex justify-between items-center"}>
+                                    <div className={"rounded-full"}>
+                                        {el.avatar}
+                                    </div>
+                                    <div>
+                                        {el.name}
+                                    </div>
+
+                                </div>
+                                <p key={el.id}>{el.testimonialsPl}</p>
+                            </div>
+                        )
+                    })}
 
                 </div>
             </main>
