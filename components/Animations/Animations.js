@@ -75,3 +75,31 @@ export const ModalText = {
         opacity: 0,
     },
 }
+
+export const StarBox = {
+    show: {
+        pathLength: 1,
+        transition: {
+            duration: 2,
+            ease: "easeInOut",
+            delay: 0.5
+        }
+    },
+    hidden: {
+        pathLength: 0
+    },
+}
+
+export const Star = {
+    show: {
+        pathLength: 1,
+        transition: {
+            duration: 2,
+            ease: "easeInOut",
+            delay: 0.8
+        }
+    },
+    hidden: {
+        pathLength: 0
+    },
+}
