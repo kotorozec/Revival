@@ -8,7 +8,7 @@ import {motion} from "framer-motion";
 import {useState} from "react";
 import styled from "styled-components";
 import SvgStar from "../components/SVGPopup";
-import {MdKeyboardArrowLeft,MdKeyboardArrowRight } from "react-icons/md";
+import {MdKeyboardArrowLeft, MdKeyboardArrowRight} from "react-icons/md";
 
 const Referencje = () => {
     const routerTranslation = useRouter();
@@ -42,29 +42,40 @@ const Referencje = () => {
                         .filter((_, index) => index === slideIndex)
                         .map(testimonial => {
                             return (
-                                <motion.div key={testimonial.id} className={"px-2 md:px-16 h-full w-3/4"}
+                                <motion.div key={testimonial.id} className={"px-2 h-full w-full"}
                                             initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}}
                                             transition={{duration: 0.8}}>
+                                    <div className={"flex justify-evenly items-center gap-x-2"}>
 
-                                    <h2 className={"text-gray-600  font-semibold py-2 md:py-6 text-white dark:text-gray-600"}>{testimonial.name}</h2>
-                                    <p className={"text-gray-600 text-white font-semibold  dark:text-gray-600"}>{locale === 'pl' && testimonial.testimonialsPl || locale !== 'pl' && testimonial.testimonials}</p>
-                                    <div className={"flex justify-center items-center gap-x-1 py-2 md:pt-6"}>
-                                        <SvgStar/>
-                                        <SvgStar/>
-                                        <SvgStar/>
-                                        <SvgStar/>
-                                        <SvgStar/>
-                                    </div>
-                                    <motion.div className={"flex justify-center items-center gap-x-2 py-2 md:pt-6"}>
-                                        <motion.div onClick={() => pagination(-1)} className={"bg-gray-600 rounded-full duration-300"}>
-                                            <MdKeyboardArrowLeft className={"text-2xl text-white"}></MdKeyboardArrowLeft>
+                                        <motion.div onClick={() => pagination(-1)}
+                                                    className={"bg-gray-600 rounded-lg duration-300 cursor-pointer"}>
+                                            <MdKeyboardArrowLeft
+                                                className={"text-3xl text-white"}></MdKeyboardArrowLeft>
                                         </motion.div>
+                                        <div className={"w"}>
+                                            <h2 className={"text-gray-600  font-semibold py-2 md:py-6 text-white dark:text-gray-600"}>{testimonial.name}</h2>
+                                            <p className={"text-gray-600 text-white font-semibold  dark:text-gray-600 px-2"}>{locale === 'pl' && testimonial.testimonialsPl || locale !== 'pl' && testimonial.testimonials}</p>
+                                            <div className={"flex justify-center items-center gap-x-2 py-2 md:pt-6"}>
+                                                <SvgStar/>
+                                                <SvgStar/>
+                                                <SvgStar/>
+                                                <SvgStar/>
+                                                <SvgStar/>
+                                            </div>
+                                        </div>
+                                        <motion.div onClick={() => pagination(1)}
+                                                    className={"bg-gray-600 rounded-lg duration-300"}>
+                                            <MdKeyboardArrowRight
+                                                className={"text-3xl text-white cursor-pointer"}></MdKeyboardArrowRight>
+                                        </motion.div>
+                                    </div>
+
+
+                                    <motion.div className={"flex justify-center items-center gap-x-2 py-2 md:pt-6"}>
+
                                         {testimonials.map((el, index) => (
                                             <Dots active={index === slideIndex ? 1 : 0} key={el.idPag}></Dots>
                                         ))}
-                                        <motion.div onClick={() => pagination(1)} className={"bg-gray-600 rounded-full duration-300"}>
-                                            <MdKeyboardArrowRight className={"text-2xl text-white"}></MdKeyboardArrowRight>
-                                        </motion.div>
                                     </motion.div>
 
 
