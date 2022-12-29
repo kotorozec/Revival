@@ -6,13 +6,10 @@ const Layout = ({children}) => {
     return (
         <>
             <Navbar/>
-
-            <div>
                 <main className={"min-h-[80vh]"}>
                     {children}
                     <BackToTopButton/>
                 </main>
-            </div>
             <Footer/>
         </>
     )

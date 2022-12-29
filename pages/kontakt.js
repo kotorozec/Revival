@@ -63,11 +63,11 @@ export const Kontakt = () => {
 
             <main className={"container max-w-screen-2xl mx-auto px-5"}>
                 <div className="flex flex-col justify-center py-4">
-                    <div className="sm:mx-auto sm:w-full sm:max-w-xl">
+                    <div className="sm:mx-auto sm:w-full sm:max-w-2xl">
                         <h1 className={"dark:text-white"}>{t.ContactTitlePart1}<span
                             className={"text-[#ffa500]"}>{t.ContactTitlePart2}</span></h1>
-                        <p className="mt-2 text-center text-sm text-gray-600 font-semibold">{t.ContactCallToAction}
-                        </p>
+                            <p className="mt-4 text-center text-md text-gray-600 font-semibold dark:text-white max-w-5xl">{t.ContactCallToAction}</p>
+
                         {error && (
                             <p className={"text-gray-800 font-semibold text-md text-center mt-2  mb-0 dark:text-white"}>{error}</p>
                         )}
