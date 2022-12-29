@@ -100,7 +100,6 @@ export const Star = {
     show: {
         pathLength: 1,
         pathOffset: 0,
-        fill:"#fff",
         transition: {
             duration: 2,
             ease: "easeInOut",
@@ -110,6 +109,5 @@ export const Star = {
     hidden: {
         pathLength: 0,
         pathOffset: 1,
-        fill:"#ffa500",
     },
 }
