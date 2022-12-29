@@ -78,7 +78,8 @@ export const ModalText = {
 
 export const StarBox = {
     show: {
-        pathLength: 1,
+        x: [0, 100, 0],
+        boxShadow:"20px 20px 20px 0 #1F2937",
         transition: {
             duration: 2,
             ease: "easeInOut",
@@ -86,7 +87,12 @@ export const StarBox = {
         }
     },
     hidden: {
-        pathLength: 0
+        x: [null,0,0],
+        transition: {
+            duration: 2,
+            ease: "easeInOut",
+            delay: 1
+        }
     },
 }
 
@@ -94,6 +100,7 @@ export const Star = {
     show: {
         pathLength: 1,
         pathOffset: 0,
+        fill:"#fff",
         transition: {
             duration: 2,
             ease: "easeInOut",
@@ -103,5 +110,6 @@ export const Star = {
     hidden: {
         pathLength: 0,
         pathOffset: 1,
+        fill:"#ffa500",
     },
 }

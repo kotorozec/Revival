@@ -52,7 +52,7 @@ const Referencje = () => {
                                             <MdKeyboardArrowLeft
                                                 className={"text-3xl text-white"}></MdKeyboardArrowLeft>
                                         </motion.div>
-                                        <div className={"w"}>
+                                        <div>
                                             <h2 className={"text-gray-600  font-semibold py-2 md:py-6 text-white dark:text-gray-600"}>{testimonial.name}</h2>
                                             <p className={"text-gray-600 text-white font-semibold  dark:text-gray-600 px-2"}>{locale === 'pl' && testimonial.testimonialsPl || locale !== 'pl' && testimonial.testimonials}</p>
                                             <div className={"flex justify-center items-center gap-x-2 py-2 md:pt-6"}>
