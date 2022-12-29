@@ -79,7 +79,7 @@ export const ModalText = {
 export const StarBox = {
     show: {
         x: [0, 100, 0],
-        boxShadow:"20px 20px 20px 0 #1F2937",
+        opacity:1,
         transition: {
             duration: 2,
             ease: "easeInOut",
@@ -87,7 +87,7 @@ export const StarBox = {
         }
     },
     hidden: {
-        x: [null,0,0],
+        opacity:0,
         transition: {
             duration: 2,
             ease: "easeInOut",
