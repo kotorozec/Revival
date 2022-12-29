@@ -93,6 +93,7 @@ export const StarBox = {
 export const Star = {
     show: {
         pathLength: 1,
+        pathOffset: 0,
         transition: {
             duration: 2,
             ease: "easeInOut",
@@ -100,6 +101,7 @@ export const Star = {
         }
     },
     hidden: {
-        pathLength: 0
+        pathLength: 0,
+        pathOffset: 1,
     },
 }

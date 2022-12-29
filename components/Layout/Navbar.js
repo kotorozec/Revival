@@ -82,7 +82,7 @@ const Navbar = () => {
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/" ? '100%' : '0%'}}/>
                             </Link>
-                            <Link href="/pages/uslugi" className={"ml-10"}>
+                            <Link href="/uslugi" className={"ml-10"}>
                                 <div className={"text-sm uppercase hover:scale-110 transition relative text-gray-500 font-semibold dark:text-white"}>{t.MenuServices}</div>
                                 <Line transition={{duration: 0.75}} initial={{width: "0"}}
                                       animate={{width: router.asPath === "/uslugi" ? '100%' : '0%'}}/>
