@@ -18,7 +18,7 @@ export default function Home() {
             </Head>
             <main className={"container max-w-screen-2xl mx-auto px-5"}>
                 <div className={"flex flex-wrap justify-evenly items-center"}>
-                    <div className={"md:w-1/2"}>
+                    <div className={"sm:w-full md:w-1/2 flex justify-center items-center md:min-h-[60vh]"} aria-label={locale === 'pl' && revivalIntro[0].introPl || locale !== 'pl' && revivalIntro[0].intro}>
                         <TypingMainPage/>
                     </div>
 

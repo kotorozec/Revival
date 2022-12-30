@@ -40,6 +40,8 @@ const useTypeHighlight = () => {
             }
             case Phase.Deleting: {
                 if (!typeHighlight) {
+                    const nextIndexOfObjectArray = selectTxt + 1
+                    setSelectTxt(revivalIntro[nextIndexOfObjectArray] ? nextIndexOfObjectArray : 0)
                     setPhase(Phase.Typing)
                     return
                 }
@@ -54,7 +56,7 @@ const useTypeHighlight = () => {
                     if (locale !== 'pl') {
                         setTypeHighlight(prevTypeHighlightEn)
                     }
-                }, 200)
+                }, 100)
 
                 return () => clearTimeout(timeout)
 
