@@ -7,59 +7,60 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
 
 @layer base {
-  body {
-    @apply bg-gray-100
-  }
+   body {
+	  @apply bg-gray-100 dark:bg-gray-800 dark:text-white
+   }
+
+   h1 {
+	  @apply mt-6 text-center text-4xl font-extrabold text-gray-800
+   }
+
+   h2 {
+	  @apply text-3xl font-semibold text-gray-700
+   }
+
+   h3 {
+	  @apply text-2xl
+   }
+
+   h4 {
+	  @apply text-xl my-2
+   }
+
+   p {
+	  @apply my-1
+   }
+
+   [type="email"],
+   [type="number"],
+   [type="text"],
+   [multiple],
+   textarea,
+   select, {
+	  @apply w-full text-sm font-medium text-gray-700 rounded-lg border-gray-300 shadow-sm focus:border-[#ffa500] focus:ring-[#ffa500] mt-1
+   }
+
+   [type="checkbox"] {
+	  @apply focus:ring-[#ffa500] text-[#ffa500] rounded-md
+   }
+
+   label {
+	  @apply text-sm font-medium text-gray-700
+   }
 }
 
-@layer base {
-  body {
-    @apply dark:bg-gray-800 dark:text-white
-  }
-}
-
-@layer base {
- h1 {
-   @apply mt-6 text-center text-4xl font-extrabold text-gray-800
- }
-  h2 {
-    @apply text-3xl font-semibold text-gray-700
-  }
-  h3 {
-    @apply text-2xl
-  }
-  h4 {
-    @apply text-xl my-2
-  }
-  p{
-    @apply my-1
-  }
- }
-
-
-@layer base {
-  [type="email"],
-  [type="number"],
-  [type="text"],
-  [multiple],
-  textarea,
-  select, {
-    @apply w-full text-sm font-medium text-gray-700 rounded-lg border-gray-300 shadow-sm focus:border-[#ffa500] focus:ring-[#ffa500] mt-1
-  }
-}
-
-@layer base {
-  [type="checkbox"] {
-    @apply focus:ring-[#ffa500] text-[#ffa500] rounded-md
-  }
-}
-
-@layer base {
-  label {
-    @apply text-sm font-medium text-gray-700
-  }
+@layer components {
+   .blinking-cursor:after {
+	content: '|';
+	  animation: blink 1s step-start infinite;
+   }
+   @keyframes blink {
+	  50% {
+		 opacity: 0;
+	  }
+   }
 }
