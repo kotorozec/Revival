@@ -33,7 +33,7 @@ const useTypeHighlight = () => {
                     if (locale !== 'pl') {
                         setTypeHighlight(nextTypeHighlightEn)
                     }
-                }, 150)
+                }, 100)
 
                 return () => clearTimeout(timeout)
 

@@ -7,12 +7,13 @@ const TypingMainPage = () => {
     const {locale} = routerTranslation;
     const highlight = useTypeHighlight()
     return (
-        <>
-            <h1 className={"flex flex-col lg:block items-center text-center py-6 tracking-tight  md:text-5xl font-bold"}>
-                <span className={"text-gray-600 dark:text-white block "}>{locale === 'pl' && revivalIntro[0].introPl || locale !== 'pl' && revivalIntro[0].intro}</span>
-                <span className={"text-[#ffa500] blinking-cursor"}>{highlight}</span>
-            </h1>
-        </>
+            <div className={"h-[60px] sm:h-fit"}>
+                <h2 className={"text-[#ffa500] blinking-cursor text-center md:text-4xl font-extrabold"}>
+                    {highlight}
+                </h2>
+            </div>
+
+
     )
 }
 

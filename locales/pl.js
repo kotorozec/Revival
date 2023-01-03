@@ -10,6 +10,7 @@ export default {
     MainPageTitle:'Sprzątanie specjalistyczne Warszawa | Sprzątanie po śmierci i po pożarach  | revival.net.pl',
     MainMetaDescription:'Revival jest firmą zajmującą się przede wszystkim sprzątaniem po zgonach. Usuwamy skutki obecności osób zmarłych w mieszkaniach i samochodach. Wejdź na stronę!',
     MainTitle:"Zobacz co nas wyróżnia!",
+    MainIntroText:"Zapewniamy klientom pełne wsparcie, przeprowadzając czyszczenie po zgonach, w ramach którego pozbywamy się pozostałości biologicznych i likwidujemy przykre zapachy. Wszystkie prace wykonujemy z zachowaniem szczególnej ostrożności.",
     PricePageTitle:'Cennik Revival – wycena specjalistycznych usług sprzątających',
     PriceMetaDescription:'Przygotowaliśmy podstawowy cennik, na podstawie którego dokonujemy indywidualnej wyceny usług sprzątających – zapraszamy do zapoznania się ze szczegółami.',
     PriceTitlePart1: 'Cennik - jasne i przejrzyste',

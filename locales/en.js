@@ -10,6 +10,7 @@ export default {
     MainPageTitle: 'Specialized cleaning Warsaw | Cleaning after death and after fires | revival.net.pl',
     MainMetaDescription: 'Revival is a company primarily engaged in cleaning up after deaths. We remove the effects of the presence of deceased people in apartments and cars. Visit the website!',
     MainTitle: "See what sets us apart!",
+    MainIntroText:"We provide customers with full support, carrying out cleaning after deaths, which includes getting rid of biological residues and eliminating unpleasant odors. We carry out all work with special care.",
     PricePageTitle: 'Revival price list - pricing for specialized cleaning services   ',
     PriceMetaDescription: 'We have prepared a basic price list, on the basis of which we make an individual quote for cleaning services - we invite you to read the details.',
     PriceTitlePart1: 'Pricing - clear and transparent',
