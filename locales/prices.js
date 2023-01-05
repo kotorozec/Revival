@@ -1,9 +1,9 @@
-import messege from '../assets/message.svg'
-import touch from '../assets/stay_in_touch.svg'
-import town from '../assets/town.svg'
-import show from '../assets/show.svg'
-import dragable from '../assets/dragable.svg'
-import dawn from '../assets/dawn.svg'
+import messege from '../assets/pricing/message.svg'
+import touch from '../assets/pricing/stay_in_touch.svg'
+import town from '../assets/pricing/town.svg'
+import show from '../assets/pricing/show.svg'
+import dragable from '../assets/pricing/dragable.svg'
+import dawn from '../assets/pricing/dawn.svg'
 const prices = [
     {
         id: 1,

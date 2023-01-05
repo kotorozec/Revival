@@ -10,7 +10,7 @@ export default {
     MainPageTitle: 'Specialized cleaning Warsaw | Cleaning after death and after fires | revival.net.pl',
     MainMetaDescription: 'Revival is a company primarily engaged in cleaning up after deaths. We remove the effects of the presence of deceased people in apartments and cars. Visit the website!',
     MainTitle: "See what sets us apart!",
-    MainIntroText:"We provide customers with full support, carrying out cleaning after deaths, which includes getting rid of biological residues and eliminating unpleasant odors. We carry out all work with special care.",
+    MainIntroText:"We are high-class specialists who primarily perform cleaning after deaths. We remove the effects of the presence of the deceased in apartments and cars, regardless of the advancement of the decomposition process of the corpse. We also perform other activities, such as cleaning after fires, disinfection and removal of bad odor from rooms through ozone. We deal with disinsecting and spraying against mosquitoes and other insects. We have been operating effectively for many years in Warsaw and the surrounding area, most actively in the area of Piaseczno and Konstancin-Jeziorna.",
     PricePageTitle: 'Revival price list - pricing for specialized cleaning services   ',
     PriceMetaDescription: 'We have prepared a basic price list, on the basis of which we make an individual quote for cleaning services - we invite you to read the details.',
     PriceTitlePart1: 'Pricing - clear and transparent',

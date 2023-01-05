@@ -8,9 +8,9 @@ const TypingMainPage = () => {
     const highlight = useTypeHighlight()
     return (
             <div className={"h-[60px] sm:h-fit"}>
-                <h2 className={"text-[#ffa500] blinking-cursor text-center md:text-4xl font-extrabold"}>
+                <h3 className={"text-[#ffa500] blinking-cursor font-extrabold"}>
                     {highlight}
-                </h2>
+                </h3>
             </div>
 
 
