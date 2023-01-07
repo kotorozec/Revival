@@ -2,14 +2,13 @@ import Head from 'next/head'
 import {useRouter} from 'next/router';
 import pl from "../locales/pl";
 import en from "../locales/en";
-import revivalIntro from "../locales/revivalIntro";
 import TypingMainPage from "../components/TypingAnimations/TypingMainPage";
 import Image from "next/image";
 import dots from '../assets/hero-and-ornaments/dots-lot.png'
 import dotsSmall from '../assets/hero-and-ornaments/dots-small.png'
 import circle from '../assets/hero-and-ornaments/hero-circle.png'
 
-export default function Home() {
+const  Home = () => {
     const routerTranslation = useRouter();
     const {locale} = routerTranslation;
     const t = locale === 'pl' ? pl : en;
@@ -20,99 +19,87 @@ export default function Home() {
                 <meta name="description"
                       content={t.MainMetaDescription}/>
             </Head>
-            <main className={"container max-w-screen-2xl mx-auto px-5  min-h-[80vh] flex justify-center items-center"}>
-                <div className={"grid grid-cols-1 md:grid-cols-2 w-full h-full py-10 place-items-center"}>
+            <main
+                className={"container max-w-screen-2xl mx-auto px-5 h-fit flex justify-center items-center relative"}>
+                <div className={"absolute top-0 left-10 "}>
+                    <Image src={dots} width={67} height={67} alt={""} className={"rotate-dots-upper"}></Image>
+                </div>
+
+                <div className={"absolute -bottom-4 md:bottom-0 left-10"}>
+                    <Image src={dotsSmall} width={50} height={50} alt={""} className={"rotate-dots-bottom"}></Image>
+                </div>
+                <div className={"grid grid-cols-1 md:grid-cols-2 w-full h-full py-10 place-items-center p-5 "}>
                     <div className={"place-items-center grid grid-cols-1 relative"}>
-                        <h1 className={"text-gray-600 font-semibold dark:text-white text-5xl text-left "}>{t.MainTitle}</h1>
+                        <h1 className={"text-gray-600 font-semibold dark:text-white text-4xl pb-4 w-full"}>{t.MainTitle}</h1>
                         <TypingMainPage/>
 
-                        <p className="my-4 text-left  text-md text-gray-600 font-semibold dark:text-white w-3/4">
+                        <p className="my-4 text-md text-gray-600 font-semibold dark:text-white xl:w-3/4">
                             {t.MainIntroText}
                         </p>
 
+                        <h2 className={"pb-6 dark:text-white w-full xl:text-center "}>{t.MainServicesIntro}</h2>
+                        <div>
+                            <div className={"grid grid-cols-2 md:grid-cols-2 gap-5 pb-6"}>
+                                <div className={"bg-white rounded-full p-3 flex items-center justify-evenly gap-1 dark:text-gray-800  text-center shadow-xl "}>
+                                    <div className="min-h-[0.8rem] min-w-[0.8rem] bg-[#ffa500] rounded-full before:content-['']" ></div>
+                                    <h3 className={"text-base w-full"}>{t.MainServicesFirst}</h3>
+                                </div>
+                                <div className={"bg-white rounded-full p-3 flex items-center justify-evenly gap-1 dark:text-gray-800  text-center shadow-xl "}>
+                                    <div className="min-h-[0.8rem] min-w-[0.8rem] bg-gray-800 rounded-full before:content-['']"></div>
+                                    <h3 className={"text-base w-full"}>{t.MainServicesSecond}</h3>
+                                </div>
+                                <div className={"bg-white rounded-full p-3 flex items-center justify-evenly gap-1 dark:text-gray-800  text-center shadow-xl "}>
+                                    <div className="min-h-[0.8rem] min-w-[0.8rem] bg-[#ffa500] rounded-full before:content-['']" ></div>
+                                    <h3 className={"text-base w-full"}>{t.MainServicesThird}</h3>
+                                </div>
+                                <div className={"bg-white rounded-full p-3 flex items-center justify-evenly gap-1 dark:text-gray-800  text-center shadow-xl "}>
+                                    <div className="min-h-[0.8rem] min-w-[0.8rem] bg-gray-800 rounded-full before:content-['']"></div>
+                                    <h3 className={"text-base w-full"}>{t.MainServicesForth}</h3>
+                                </div>
 
-                        <div className={"py-5"}>
-                            <h2 className={"text-left pb-10"}> Czym się zajmujemy?</h2>
-                            <div className={"grid grid-cols-5 gap-5"}>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2 flex-1"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
+                                <div className={"bg-white rounded-full p-3 flex items-center justify-evenly gap-1 dark:text-gray-800  text-center shadow-xl "}>
+                                    <div className="min-h-[0.8rem] min-w-[0.8rem] bg-[#ffa500] rounded-full before:content-['']" ></div>
+                                    <h3 className={"text-base w-full"}>{t.MainServicesFifth}</h3>
                                 </div>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
-                                </div>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
-                                </div>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
-                                </div>
-
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
-                                </div>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
-                                </div>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
-                                </div>
-                                <div className={"bg-white rounded-full px-3 flex items-center justify-evenly relative gap-2"}>
-                                    <div className="w-3 h-3 bg-rose-700 rounded-full before:content-['']"></div>
-                                    <p>Usługa 1</p>
+                                  <div className={"bg-white rounded-full p-3 flex items-center justify-evenly gap-1 dark:text-gray-800  text-center shadow-xl "}>
+                                    <div className="min-h-[0.8rem] min-w-[0.8rem] bg-gray-800 rounded-full before:content-['']"></div>
+                                    <h3 className={"text-base w-full"}>{t.MainServicesSixth}</h3>
                                 </div>
                             </div>
                         </div>
 
-
-                        <div className={"absolute top-0 left-0"}>
-                            <Image src={dots} width={67} height={67} alt={""}></Image>
-                        </div>
-
-                        <div className={"absolute bottom-[-20%] left-0"}>
-                            <Image src={dotsSmall} width={40} height={40} alt={""}></Image>
-                        </div>
                     </div>
 
-                    <div
-                        className={"sm:py-5 md:py-0 grid grid-cols-1 md:grid-cols-2 place-items-center gap-5 lg:bg-gray-800 lg:rounded-[100%] lg:aspect-square lg:shadow-2xl gap-x-10 lg:dark:bg-white relative"}>
+                    <div className={"sm:py-5 md:py-0 grid grid-cols-1 xl:grid-cols-2 place-items-center gap-5 lg:bg-gray-800 lg:rounded-[100%] lg:aspect-square lg:shadow-2xl gap-x-3 lg:bg-gray-700 lg:relative"}>
 
-                        <div className={"absolute bottom-[0%] left-20"}>
-                            <Image src={circle} width={150} height={150} alt={""}></Image>
-                        </div>
-                        <div
-                            className={"bg-white rounded-lg w-3/4 lg:w-full max-h-full grid grid-cols-1 place-items-center p-5 md:relative md:top-[50%] md:left-[40%] md:translate-x-[-50%] shadow-2xl lg:hover:scale-110 duration-300"}>
-                            <h2>Zaufanie</h2>
-                            <p>Pracujemy tak, by nasi klienci mieli do nas absolutne zaufanie. Podchodzimy do naszych
-                                obowiązków sumiennie i z pełną odpowiedzialnością.</p>
+                        <div className={"bg-white rounded-lg md:w-3/4 xl:w-full max-h-full grid grid-cols-1 place-items-center p-5 xl:relative xl:top-[50%] xl:left-[40%] xl:translate-x-[-50%] shadow-2xl hover:scale-110 duration-300 dark:text-gray-800 text-center"}>
+                            <h2 className={"text-lg lg:text-3xl"}>{t.MainServicesWheelSecond}</h2>
+                            <p className={"text-sm xl:text-base"}>{t.MainServicesWheelSecondDescription}</p>
 
                         </div>
                         <div
-                            className={"bg-white rounded-lg w-3/4 md:w-full  max-h-full  grid grid-cols-1 place-items-center p-5 md:relative md:top-[0%] md:right-[-50%] md:translate-x-[-50%] shadow-2xl lg:hover:scale-110 duration-300"}>
-                            <h2>Skuteczność</h2>
-                            <p>Gwarancję likwidacji niebezpiecznych substancji oraz zneutralizowanie przykrych zapachów
-                                zapewnia zapis w umowie, który zobowiązuje nas do pełnej i skutecznej usługi, a w razie
-                                niepowodzenia zwrotu kosztów.</p>
+                            className={"bg-white rounded-lg md:w-3/4 xl:w-full  max-h-full  grid grid-cols-1 place-items-center p-5 xl:relative lg:top-[0%] lg:right-[-50%] xl:translate-x-[-50%] shadow-2xl lg:hover:scale-110 duration-300 dark:text-gray-800 text-center"}>
+                            <h2 className={"text-xl lg:text-3xl"}>{t.MainServicesWheelFirst}</h2>
+                            <p className={"text-sm xl:text-base"}>{t.MainServicesWheelFirstDescription}</p>
 
                         </div>
                         <div
-                            className={"bg-white rounded-lg w-3/4 md:w-full max-h-full  grid grid-cols-1 place-items-center p-5 md:col-end-3 p-5 shadow-2xl lg:hover:scale-110 duration-300"}>
-                            <h2>Profesjonalizm</h2>
-                            <p>Jesteśmy firmą profesjonalną i podejmujemy się nawet najtrudniejszych zadań. Zachęcamy do
-                                zapoznania się ze szczegółami szerokiej oferty sprzątania, dezynfekcji i
-                                dezynsekcji.</p>
+                            className={"bg-white rounded-lg md:w-3/4 xl:w-full max-h-full  grid grid-cols-1 place-items-center p-5 xl:col-end-3 p-5 shadow-2xl hover:scale-110 duration-300 dark:text-gray-800 text-center"}>
+                            <h2 className={"text-xl lg:text-3xl"}>{t.MainServicesWheelThird}</h2>
+                            <p className={"text-sm xl:text-base"}>{t.MainServicesWheelThirdDescription}</p>
                         </div>
                     </div>
                 </div>
 
+
+                <div className={"hidden absolute bottom-[0%] right-[30%] translate-x-[-50%] xl:block"}>
+                    <Image src={circle} width={150} height={150} alt={""} className={"rotate-circle-mainPage"}></Image>
+                </div>
             </main>
         </>
 
     )
 }
+
+
+export default Home

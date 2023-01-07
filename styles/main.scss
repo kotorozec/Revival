@@ -51,6 +51,53 @@ html {
    label {
 	  @apply text-sm font-medium text-gray-700
    }
+
+  .rotate-dots-upper {
+    animation: rotate-dots-upper 4s linear infinite;
+  }
+  .rotate-dots-bottom {
+    animation: rotate-dots-bottom 3s linear infinite;
+  }
+
+  .rotate-circle-mainPage {
+    animation: rotate-circle-mainPage 5s linear infinite;
+  }
+
+  @keyframes rotate-dots-upper {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+
+  @keyframes rotate-dots-bottom {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes rotate-circle-mainPage {
+    0% {
+      transform: translate(-40px,-80px) ;
+    }
+    25% {
+      transform: translate(-80px,-40px) ;
+    }
+    50% {
+      transform: translate(80px,40px) ;
+    }
+    75% {
+      transform: translate(80px,-40px) ;
+    }
+    100% {
+      transform: translate(-40px,-80px) ;
+    }
+  }
 }
 
 @layer components {
