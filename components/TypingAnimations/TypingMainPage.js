@@ -7,10 +7,10 @@ const TypingMainPage = () => {
     const {locale} = routerTranslation;
     const highlight = useTypeHighlight()
     return (
-            <div className={"h-[60px] sm:h-fit"}>
-                <h3 className={"text-[#ffa500] blinking-cursor font-extrabold text-center"}>
+            <div className={"sm:h-fit"}>
+                <h2 className={"text-[#ffa500] blinking-cursor font-extrabold text-center text-lg"}>
                     {highlight}
-                </h3>
+                </h2>
             </div>
 
 
