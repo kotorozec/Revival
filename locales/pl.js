@@ -46,7 +46,7 @@ export default {
     GalleryIntroText:'Zachęcamy do zapoznania się z przykładowymi realizacjami. Na zamieszczenie zdjęć, wyrażona została zgoda osób zlecających daną usługę.',
     TestimonialsPageTitle:'Rekomendacje Revival  – zaufało nam już wielu klientów',
     TestimonialsMetaDescription:'Zrealizowaliśmy wiele zleceń, które zaowocowały w rekomendacje od zadowolonych z naszych usług klientów. Warto się z nimi zapoznać i podjąć z nami współpracę.',
-    TestimonialsTitlePart1: 'Rekomendacje - zaufało nam już ',
+    TestimonialsTitlePart1: 'Zaufało nam ',
     TestimonialsTitlePart2: ' wielu klientów',
     TestimonialsIntroText:'Możemy pochwalić się wieloma zrealizowanymi zleceniami i rekomendacjami uzyskanymi od klientów, którzy zaufali naszej firmie. Warto się z nimi zapoznać, aby dowiedzieć się, w jakich miejscach pracowaliśmy.',
     ContactPageTitle:'Kontakt do specjalistycznej firmy sprzątającej po zgonach',
