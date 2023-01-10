@@ -45,7 +45,7 @@ const Home = () => {
                     </div>
 
                     <div
-                        className={"sm:py-5 md:py-0 grid grid-cols-1 xl:grid-cols-2 place-items-center gap-5 lg:bg-gray-800 lg:rounded-[100%] lg:aspect-square lg:shadow-2xl gap-x-3 lg:bg-gray-700 lg:relative"}>
+                        className={"sm:py-5 md:py-0 grid grid-cols-1 xl:grid-cols-2 place-items-center gap-5 lg:bg-gray-800 lg:rounded-[100%] h-full lg:shadow-2xl gap-x-3 lg:bg-gray-700 lg:relative"}>
 
                         <div
                             className={"bg-white rounded-lg md:w-3/4 xl:w-full max-h-full grid grid-cols-1 place-items-center p-5 xl:relative xl:top-[50%] xl:left-[40%] xl:translate-x-[-50%] shadow-2xl lg:hover:scale-110 duration-300 dark:text-gray-800 text-center"}>
